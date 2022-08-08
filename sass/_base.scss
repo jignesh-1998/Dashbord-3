@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 // COLOR VARIABLES
 $color-primary: #c69963;
 $color-primary-dark: #b28451;
@@ -11,7 +12,7 @@ $color-grey-dark-1: #54483a;
 $color-grey-dark-2: #6d5d4b;
 
 // FONT VARIABLES
-$font-primary: "Nunito", sans-serif;
+$font-primary: "Poppins", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
 // Responsive breakpoints
@@ -54,9 +55,12 @@ body {
   width: 100vw;
   display: grid;
   grid-template-rows: 13vh 87vh;
-  grid-template-columns: 8vw 55vw 37vw;
+  grid-template-columns: 6vw 55vw 37vw;
   background-color: #f3f6fd;
+  column-gap: 1vw;
   @media only screen and (max-width: $bp-medium) {
+    height: 100%;
+    width: 100%;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 2fr 1fr;
     padding: 2rem;

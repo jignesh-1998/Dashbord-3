@@ -34,18 +34,30 @@
       font-size: 2.4rem;
       margin-left: auto;
       margin-right: 1.6rem;
+      cursor: pointer;
     }
     &-dots {
       display: flex;
       font-size: 0.7rem;
       flex-direction: column;
       gap: 0.7rem;
+      cursor: pointer;
     }
   }
   &__main {
     padding: 1rem 2rem;
     display: flex;
     gap: 2rem;
+    transition: all 0.2s;
+    &:hover {
+      border-radius: 3rem;
+      background-color: #fff;
+    }
+
+    &:hover &-profile-details-div-1-star-icon {
+      color: yellow;
+    }
+
     @media only screen and (max-width: $bp-large) {
       padding: 1rem;
     }
@@ -91,11 +103,15 @@
         gap: 1rem;
       }
       &-div-1 {
+        & h3 {
+          color: #454545;
+        }
         display: flex;
         justify-content: space-between;
         align-items: center;
         &-star-icon {
           font-size: 2rem;
+          cursor: pointer;
         }
       }
       &-div-2 {

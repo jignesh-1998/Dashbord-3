@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: center;
     grid-template-rows: 1fr 1fr;
-    gap: 0.5rem;
+    row-gap: 0.5rem;
     margin-bottom: 0;
   }
   @media only screen and (max-width: $bp-x-small) {
@@ -104,7 +104,6 @@
     }
     @media only screen and (max-width: $bp-small) {
       justify-self: end;
-      gap: 3vw;
     }
     &-img {
       border-radius: 50%;
