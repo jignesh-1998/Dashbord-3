@@ -1,0 +1,153 @@
+.header {
+  grid-column: 2/-1;
+  background-color: #f3f6fd;
+
+  display: flex;
+  align-items: center;
+  // gap: 10vw;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 2vh 5vw;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1/-1;
+    padding: 0rem;
+    margin-bottom: 1rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0;
+  }
+  @media only screen and (max-width: $bp-x-small) {
+    margin: 1.5rem 0rem;
+  }
+  &__heading {
+    flex-basis: 25%;
+    @media only screen and (max-width: $bp-medium-small) {
+      flex-basis: 15%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      grid-row: 1;
+      flex-basis: auto;
+    }
+  }
+  &__search {
+    margin-left: 2rem;
+    margin-right: auto;
+    flex-basis: 25%;
+    position: relative;
+    color: $color-grey-light-2;
+    @media only screen and (max-width: $bp-medium-small) {
+      flex-basis: 15%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-basis: auto;
+      padding: 1rem;
+      grid-column: 1/-1;
+      grid-row: 2;
+    }
+    @media only screen and (max-width: $bp-x-small) {
+      padding: 0;
+      padding-right: 1rem;
+    }
+    &-input {
+      box-shadow: $box-shadow;
+      outline: none;
+      border: none;
+      border-radius: 5rem;
+      height: 3.5rem;
+      padding-left: 4rem;
+      width: 30rem;
+      &::placeholder {
+        color: $color-grey-light-2;
+        @media only screen and (max-width: $bp-x-small) {
+          font-size: 1.6rem;
+        }
+      }
+      @media only screen and (max-width: $bp-medium-small) {
+        width: 25rem;
+      }
+      @media only screen and (max-width: $bp-small) {
+        width: 100%;
+      }
+    }
+    &-icon {
+      position: absolute;
+      // height: 100%;
+      transform: translate(75%, 22%);
+      @media only screen and (max-width: $bp-x-small) {
+        transform: translate(85%, 35%);
+      }
+      & ion-icon {
+        font-size: 2rem;
+        @media only screen and (max-width: $bp-x-small) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+  &__profile {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    @media only screen and (max-width: $bp-medium) {
+      margin-right: 2rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      justify-self: end;
+      gap: 3vw;
+    }
+    &-img {
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      @media only screen and (max-width: $bp-x-small) {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+    &-add-icon {
+      font-size: 3rem;
+      cursor: pointer;
+      @media only screen and (max-width: $bp-x-small) {
+        font-size: 2.5rem;
+      }
+    }
+    &-notification-icon {
+      position: relative;
+      font-size: 3rem;
+      @media only screen and (max-width: $bp-x-small) {
+        font-size: 2.5rem;
+      }
+      cursor: pointer;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 0.5rem;
+        width: 0.5rem;
+        background-color: #fe0201;
+        border-radius: 50%;
+        top: 0.5rem;
+        right: 0.5rem;
+      }
+    }
+    &-pipe {
+      margin: 0 1rem;
+      width: 1.3px;
+      height: 3.5rem;
+      background-color: lightgrey;
+      @media only screen and (max-width: $bp-x-small) {
+        height: 3rem;
+      }
+    }
+  }
+}

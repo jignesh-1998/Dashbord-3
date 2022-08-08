@@ -1,0 +1,75 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
+
+// FONT VARIABLES
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+
+// Responsive breakpoints
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 56.25em; //900px
+$bp-medium-small: 50em; //800px
+$bp-small: 37.5em; //600px
+$bp-x-small: 28.125em; //450px
+
+$box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-x-small) {
+    font-size: 43.75%;
+  }
+}
+body {
+  font-family: $font-primary;
+  // color: $color-grey-dark-2;
+  color: #000;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 13vh 87vh;
+  grid-template-columns: 8vw 55vw 37vw;
+  background-color: #f3f6fd;
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    padding: 2rem;
+    row-gap: 3rem;
+  }
+  @media only screen and (max-width: $bp-medium-small) {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding: 1rem 3rem 1rem 3rem;
+    row-gap: 2rem;
+  }
+  @media only screen and (max-width: $bp-x-small) {
+    padding: 1rem 2rem;
+    row-gap: 1rem;
+  }
+}
